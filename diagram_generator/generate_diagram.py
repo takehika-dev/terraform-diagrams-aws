@@ -5,7 +5,7 @@ from diagrams.aws.storage import S3
 from diagrams.aws.security import IAM
 
 
-with Diagram("AWS EC2 with S3 Access (Simplified Demo)", show=False, direction="LR", filename="terraform_aws_demo_diagram.png"):
+with Diagram("AWS EC2 with S3 Access (Simplified Demo)", show=False, direction="LR", filename="terraform_aws_demo_diagram"):
 
     s3_bucket = S3("terraform-demo-bucket")
 
@@ -23,4 +23,3 @@ with Diagram("AWS EC2 with S3 Access (Simplified Demo)", show=False, direction="
 
     iam_role - Edge(label="grants access to") - s3_bucket
     igw - Edge(label="Public Internet / S3 Endpoint") - s3_bucket
-    
